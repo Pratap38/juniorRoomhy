@@ -57,7 +57,8 @@
 <body class="min-h-screen text-[#141414] font-sans">
 
     <!-- Top Utility Bar -->
-    <div class="bg-[#0D1B14] h-[45px] text-white flex items-center justify-between px-6 text-[13px]">
+    <div
+        class="bg-[#0D1B14] h-auto min-h-[45px] text-white flex items-center justify-between px-6 text-[13px] py-2 lg:py-0 hidden lg:flex">
         <div class="content-container w-full flex items-center justify-between h-full">
             <div class="flex items-center gap-8">
                 <div class="flex items-center gap-2">
@@ -79,9 +80,26 @@
                     <span class="text-gray-200">info@singhrjtransport.com</span>
                 </div>
                 <div class="flex items-center gap-4 text-gray-300 ml-4 border-l border-gray-700 pl-6 h-[20px]">
-                    <a href="#" class="hover:text-[#D89A18] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                    <a href="#" class="hover:text-[#D89A18] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-                    <a href="#" class="hover:text-[#D89A18] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" class="hover:text-[#D89A18] transition-colors"><svg width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                    <a href="#" class="hover:text-[#D89A18] transition-colors"><svg width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg></a>
+                    <a href="#" class="hover:text-[#D89A18] transition-colors"><svg width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
                 </div>
             </div>
         </div>
@@ -92,7 +110,7 @@
         <div class="content-container h-full flex items-center justify-between">
 
             <!-- Logo -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center justify-center md:justify-start gap-3">
                 <div class="flex items-end">
                     <!-- Simulated Logo -->
                     <svg width="60" height="42" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +129,7 @@
             </div>
 
             <!-- Menu -->
-            <ul class="flex items-center gap-10 font-bold text-[15px] text-[#141414] h-full">
+            <ul class="hidden lg:flex items-center gap-10 font-bold text-[15px] text-[#141414] h-full">
                 <li class="h-full flex items-center border-b-2 border-[#D89A18] text-[#141414]">
                     <a href="#" class="hover:text-[#D89A18] transition-colors">Home</a>
                 </li>
@@ -138,18 +156,54 @@
 
             <!-- Action -->
             <a href="#"
-                class="bg-[#D89A18] text-white font-[600] flex items-center gap-2 px-7 py-3.5 rounded-lg hover:bg-[#c28815] transition-all shadow-md tracking-wide">
+                class="hidden lg:flex bg-[#D89A18] text-white font-[600] items-center gap-2 px-7 py-3.5 rounded-lg hover:bg-[#c28815] transition-all shadow-md tracking-wide">
                 Get a Quote <i data-lucide="arrow-right" class="w-[18px] h-[18px]"></i>
             </a>
+
+            <button id="open-menu" class="block lg:hidden text-[#141414] p-2 -mr-2"><svg width="28" height="28"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg></button>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#0D1B14]/90 backdrop-blur-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <div class="flex justify-between items-center p-6 border-b border-white/10">
+            <div class="text-white font-extrabold text-[22px]">SINGHRJ<span
+                    class="text-[#D89A18] text-[10px] uppercase ml-2 tracking-widest block">Transport</span></div>
+            <button id="close-menu" class="text-white p-2">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+        <ul class="flex flex-col gap-6 text-white text-[22px] font-[600] p-8">
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">Services</a></li>
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">Why Us</a></li>
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">Pricing Plan</a></li>
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">Tracking</a></li>
+            <li><a href="#" class="hover:text-[#D89A18] transition-colors">Contact Us</a></li>
+        </ul>
+        <div class="mt-auto p-8 border-t border-white/10">
+            <a href="#"
+                class="bg-[#D89A18] text-white font-[600] flex items-center justify-center gap-2 w-full py-4 rounded-xl shadow-lg">
+                Get a Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </div>
+
+
     <!-- Hero Section -->
-    <div class="relative bg-[#FDFBF7]" style="height: 860px;">
+    <div class="relative bg-[#FDFBF7] min-h-screen lg:min-h-0 lg:h-[860px] py-16 lg:py-0">
         <div class="absolute inset-0 bg-dotted opacity-[0.35] z-0 pointer-events-none"></div>
 
         <!-- Truck Background Right -->
-        <div class="absolute top-0 right-0 w-[58%] h-full z-0 overflow-hidden">
+        <div class="absolute top-0 right-0 w-full lg:w-[58%] h-full z-0 overflow-hidden opacity-10 lg:opacity-100">
             <div class="w-full h-full hero-truck-bg"></div>
         </div>
 
@@ -159,15 +213,18 @@
                     class="text-[#D89A18] font-[800] flex items-center gap-2 text-[13px] tracking-[0.2em] mb-7 uppercase">
                     Trusted. Reliable. On Time.
                 </div>
-                <h1 class="text-[74px] leading-[1.05] font-[800] text-[#141414] mb-8 tracking-[-0.02em]">
+                <h1
+                    class="text-[40px] md:text-[56px] lg:text-[74px] leading-[1.1] lg:leading-[1.05] font-[800] text-[#141414] mb-6 lg:mb-8 tracking-[-0.02em]">
                     We Deliver Your <br />Business <span class="text-[#D89A18]">Forward.</span>
                 </h1>
-                <p class="text-[#666666] font-[450] text-[19px] mb-12 text-balance leading-[1.6]">
+                <p
+                    class="text-[#666666] font-[450] text-[16px] md:text-[19px] mb-8 lg:mb-12 text-balance leading-[1.6]">
                     Specialized truck transportation services for safe, secure<br> and on-time delivery across regional
                     and global routes.
                 </p>
 
-                <div class="flex items-center gap-6 mb-12">
+                <div
+                    class="flex flex-col w-full sm:w-auto sm:flex-row items-stretch sm:items-start gap-4 sm:gap-6 mb-12">
                     <a href="#"
                         class="bg-[#D89A18] text-white font-[600] flex items-center gap-3 px-8 py-4 rounded-[10px] hover:bg-[#c28815] transition-all shadow-luxury text-[17px]">
                         Our Services <div class="bg-white rounded-full p-1"><i data-lucide="arrow-right"
@@ -180,7 +237,7 @@
                 </div>
 
                 <!-- Social Proof -->
-                <div class="flex items-center gap-5">
+                <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-5">
                     <div class="flex -space-x-3">
                         <img class="w-[50px] h-[50px] rounded-full border-[3px] border-[#FDFBF7] object-cover shadow-sm"
                             src="https://i.pravatar.cc/100?img=3" alt="Client 1">
@@ -200,12 +257,12 @@
         </div>
 
         <!-- Trust Strip -->
-        <div class="absolute -bottom-16 left-0 w-full z-20 px-8">
+        <div class="relative lg:absolute mt-12 lg:mt-0 -bottom-16 left-0 w-full z-20 px-4 lg:px-8">
             <div class="content-container">
                 <div
                     class="bg-[#0D1B14] rounded-[20px] py-[44px] px-[48px] text-white shadow-2xl flex items-center justify-between">
                     <!-- Point 1 -->
-                    <div class="flex items-start gap-4 flex-1">
+                    <div class="flex items-start gap-4 w-full md:w-[45%] lg:w-auto flex-none lg:flex-1">
                         <div class="text-[#D89A18] mt-1">
                             <i data-lucide="shield-check" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                         </div>
@@ -216,9 +273,9 @@
                         </div>
                     </div>
                     <!-- Separator -->
-                    <div class="w-px h-14 bg-gray-800/80 mx-2"></div>
+                    <div class="w-px h-14 bg-gray-800/80 mx-2 hidden lg:block"></div>
                     <!-- Point 2 -->
-                    <div class="flex items-start gap-4 flex-1 pl-4">
+                    <div class="flex items-start gap-4 w-full md:w-[45%] lg:w-auto flex-none lg:flex-1 pl-0 lg:pl-4">
                         <div class="text-[#D89A18] mt-1">
                             <i data-lucide="clock" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                         </div>
@@ -229,9 +286,9 @@
                         </div>
                     </div>
                     <!-- Separator -->
-                    <div class="w-px h-14 bg-gray-800/80 mx-2"></div>
+                    <div class="w-px h-14 bg-gray-800/80 mx-2 hidden lg:block"></div>
                     <!-- Point 3 -->
-                    <div class="flex items-start gap-4 flex-1 pl-4">
+                    <div class="flex items-start gap-4 w-full md:w-[45%] lg:w-auto flex-none lg:flex-1 pl-0 lg:pl-4">
                         <div class="text-[#D89A18] mt-1">
                             <i data-lucide="globe" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                         </div>
@@ -242,9 +299,9 @@
                         </div>
                     </div>
                     <!-- Separator -->
-                    <div class="w-px h-14 bg-gray-800/80 mx-2"></div>
+                    <div class="w-px h-14 bg-gray-800/80 mx-2 hidden lg:block"></div>
                     <!-- Point 4 -->
-                    <div class="flex items-start gap-4 flex-1 pl-4">
+                    <div class="flex items-start gap-4 w-full md:w-[45%] lg:w-auto flex-none lg:flex-1 pl-0 lg:pl-4">
                         <div class="text-[#D89A18] mt-1">
                             <i data-lucide="headphones" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                         </div>
@@ -260,7 +317,7 @@
     </div>
 
     <!-- SECTION 1: Why SinghRJ Transport Stands Out -->
-    <div class="pt-[220px] pb-[120px] relative bg-[#FDFBF7] overflow-hidden">
+    <div class="pt-24 lg:pt-[220px] pb-16 lg:pb-[120px] relative bg-[#FDFBF7] overflow-hidden">
         <!-- Subtle Dotted Background -->
         <div class="absolute right-0 top-0 w-[50%] h-[100%] bg-dotted opacity-[0.3] pointer-events-none"></div>
 
@@ -274,7 +331,8 @@
                         Why SinghRJ Transport Stands Out
                     </div>
                     <!-- Large Heading -->
-                    <h2 class="text-[52px] leading-[1.1] font-[800] text-[#141414] mb-12 tracking-[-0.02em]">
+                    <h2
+                        class="text-[32px] md:text-[44px] lg:text-[52px] leading-[1.1] font-[800] text-[#141414] mb-8 lg:mb-12 tracking-[-0.02em]">
                         Why SinghRJ Transport<br>Stands <span class="text-[#D89A18]">Out</span>
                     </h2>
 
@@ -294,7 +352,7 @@
                                     cargo moving with minimal idle time.</p>
                             </div>
                             <div class="text-[#D89A18] px-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                
+
                             </div>
                         </div>
 
@@ -312,7 +370,7 @@
                                     and strong safety protocols.</p>
                             </div>
                             <div class="text-[#D89A18] px-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                
+
                             </div>
                         </div>
 
@@ -330,7 +388,7 @@
                                     to final handover.</p>
                             </div>
                             <div class="text-[#D89A18] px-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                
+
                             </div>
                         </div>
 
@@ -348,14 +406,14 @@
                                     for every cargo volume.</p>
                             </div>
                             <div class="text-[#D89A18] px-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Side (52%) -->
-                <div class="w-full lg:w-[52%] relative pl-12 h-full flex flex-col justify-center">
+                <div class="w-full lg:w-[52%] relative pl-0 lg:pl-12 h-full flex flex-col justify-center mt-12 lg:mt-0">
                     <div class="relative w-full aspect-[4/3] rounded-[22px] overflow-hidden shadow-2xl">
                         <img src="/orange_truck.png" alt="Orange Commercial Truck" class="w-full h-full object-cover">
                     </div>
@@ -389,7 +447,7 @@
                 <div class="text-[#D89A18] font-[800] text-[12px] uppercase tracking-[0.2em] mb-4">
                     How We Work
                 </div>
-                <h2 class="text-[44px] leading-[1.1] font-[800] text-[#141414] mb-5 tracking-[-0.02em]">
+                <h2 class="text-[32px] lg:text-[44px] leading-[1.1] font-[800] text-[#141414] mb-5 tracking-[-0.02em]">
                     Simple 4-Step Process
                 </h2>
                 <p class="text-[#666666] text-[17px] font-[450]">
@@ -400,9 +458,10 @@
             <!-- Horizontal Process Flow -->
             <div class="relative w-full pt-6">
                 <!-- Connecting Gold Line (Behind the cards/badges) -->
-                <div class="absolute top-[52px] left-[10%] right-[10%] h-[2px] bg-[#D89A18]/30 z-0"></div>
+                <div class="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-[2px] bg-[#D89A18]/30 z-0">
+                </div>
 
-                <div class="grid grid-cols-4 gap-6 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-6 relative z-10">
 
                     <!-- Step 1 -->
                     <div
@@ -414,10 +473,10 @@
                         </div>
                         <!-- Timeline attachment dots mapping to the center line -->
                         <div
-                            class="absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
                         <div
-                            class="absolute top-[46px] -right-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -right-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
 
                         <!-- Icon -->
@@ -445,10 +504,10 @@
                         </div>
                         <!-- Timeline attachment dots mapping to the center line -->
                         <div
-                            class="absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
                         <div
-                            class="absolute top-[46px] -right-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -right-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
 
                         <div
@@ -471,10 +530,10 @@
                         </div>
                         <!-- Timeline attachment dots mapping to the center line -->
                         <div
-                            class="absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
                         <div
-                            class="absolute top-[46px] -right-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -right-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
 
                         <div
@@ -497,7 +556,7 @@
                         </div>
                         <!-- Timeline attachment dots mapping to the center line -->
                         <div
-                            class="absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
+                            class="hidden lg:block absolute top-[46px] -left-[16px] w-[14px] h-[14px] rounded-full bg-white border-2 border-[#D89A18] z-20">
                         </div>
 
                         <div
@@ -517,13 +576,13 @@
     </div>
 
     <!-- Services Section -->
-    <div class="bg-[#FDFBF7] pt-[120px] pb-[120px]">
+    <div class="bg-[#FDFBF7] pt-16 lg:pt-[120px] pb-16 lg:pb-[120px]">
         <div class="content-container">
 
-            <div class="grid grid-cols-12 gap-12 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
                 <!-- Left Content (3 columns) -->
-                <div class="col-span-3 pr-2 position-relative pt-4">
+                <div class="col-span-1 lg:col-span-3 pr-0 lg:pr-2 position-relative pt-4 text-center lg:text-left">
                     <div class="text-[#D89A18] font-[800] text-[12px] tracking-[0.2em] mb-4 uppercase">
                         Our Services
                     </div>
@@ -552,8 +611,8 @@
                 </div>
 
                 <!-- Right Cards (9 columns) -->
-                <div class="col-span-9">
-                    <div class="grid grid-cols-4 gap-6">
+                <div class="col-span-1 lg:col-span-9">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
                         <!-- Card 1 -->
                         <div
@@ -653,9 +712,10 @@
 
     <!-- Metics Bar -->
     <div class="bg-[#FBFaf6] py-16 border-t border-gray-100/50">
-        <div class="content-container flex items-center justify-between px-16">
+        <div
+            class="content-container flex flex-col md:flex-row flex-wrap items-center justify-center md:justify-between gap-10 px-4 lg:px-16">
 
-            <div class="flex items-center gap-5">
+            <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-5">
                 <div
                     class="w-[60px] h-[60px] rounded-full border border-[#D89A18]/20 flex items-center justify-center bg-white shadow-sm">
                     <i data-lucide="truck" class="w-7 h-7 text-[#D89A18]"></i>
@@ -666,9 +726,9 @@
                 </div>
             </div>
 
-            <div class="w-px h-16 bg-gray-200"></div>
+            <div class="hidden lg:block w-px h-16 bg-gray-200"></div>
 
-            <div class="flex items-center gap-5">
+            <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-5">
                 <div
                     class="w-[60px] h-[60px] rounded-full border border-[#D89A18]/20 flex items-center justify-center bg-white shadow-sm">
                     <i data-lucide="users" class="w-7 h-7 text-[#D89A18]"></i>
@@ -679,9 +739,9 @@
                 </div>
             </div>
 
-            <div class="w-px h-16 bg-gray-200"></div>
+            <div class="hidden lg:block w-px h-16 bg-gray-200"></div>
 
-            <div class="flex items-center gap-5">
+            <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-5">
                 <div
                     class="w-[60px] h-[60px] rounded-full border border-[#D89A18]/20 flex items-center justify-center bg-white shadow-sm">
                     <i data-lucide="route" class="w-7 h-7 text-[#D89A18]"></i>
@@ -692,9 +752,9 @@
                 </div>
             </div>
 
-            <div class="w-px h-16 bg-gray-200"></div>
+            <div class="hidden lg:block w-px h-16 bg-gray-200"></div>
 
-            <div class="flex items-center gap-5">
+            <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-4 md:gap-5">
                 <div
                     class="w-[60px] h-[60px] rounded-full border border-[#D89A18]/20 flex items-center justify-center bg-white shadow-sm">
                     <i data-lucide="shield-check" class="w-7 h-7 text-[#D89A18]"></i>
@@ -716,7 +776,8 @@
                 Our Clients Say
             </div>
             <!-- Heading -->
-            <h2 class="text-[44px] leading-[1.1] font-[800] text-[#141414] mb-3 tracking-[-0.02em] text-center">
+            <h2
+                class="text-[32px] lg:text-[44px] leading-[1.1] font-[800] text-[#141414] mb-3 tracking-[-0.02em] text-center">
                 What Our Clients Say
             </h2>
             <p class="text-[#666666] text-[17px] font-[450] text-center mb-[70px]">
@@ -732,7 +793,7 @@
                     <!-- Card 1 -->
                     <div class="swiper-slide w-auto">
                         <div
-                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
+                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[320px] sm:w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
                             <div>
                                 <i data-lucide="quote"
                                     class="w-8 h-8 text-[#D89A18] fill-[#D89A18]/20 mb-6 font-[800]"></i>
@@ -756,7 +817,7 @@
                     <!-- Card 2 -->
                     <div class="swiper-slide w-auto">
                         <div
-                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
+                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[320px] sm:w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
                             <div>
                                 <i data-lucide="quote"
                                     class="w-8 h-8 text-[#D89A18] fill-[#D89A18]/20 mb-6 font-[800]"></i>
@@ -780,7 +841,7 @@
                     <!-- Card 3 -->
                     <div class="swiper-slide w-auto">
                         <div
-                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
+                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[320px] sm:w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
                             <div>
                                 <i data-lucide="quote"
                                     class="w-8 h-8 text-[#D89A18] fill-[#D89A18]/20 mb-6 font-[800]"></i>
@@ -804,7 +865,7 @@
                     <!-- Card 4 (Duplicate for seamless loop visualization) -->
                     <div class="swiper-slide w-auto">
                         <div
-                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
+                            class="bg-white rounded-[22px] p-10 shadow-luxury w-[320px] sm:w-[420px] border border-gray-100/50 flex flex-col justify-between h-[280px]">
                             <div>
                                 <i data-lucide="quote"
                                     class="w-8 h-8 text-[#D89A18] fill-[#D89A18]/20 mb-6 font-[800]"></i>
@@ -842,7 +903,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-[#FCFBF8] pb-[120px]">
+    <div class="bg-[#FCFBF8] pb-16 lg:pb-[120px]">
         <div class="content-container">
             <div
                 class="relative bg-[#0E1B14] rounded-[30px] overflow-hidden p-16 lg:px-24 lg:py-20 flex flex-col items-center justify-center text-center shadow-[0_30px_60px_-15px_rgba(14,27,20,0.4)] border border-[#ECE7DE]/5">
@@ -862,7 +923,8 @@
                         Start Today
                     </div>
 
-                    <h2 class="text-[52px] leading-[1.1] font-[800] text-white mb-6 tracking-tight">
+                    <h2
+                        class="text-[32px] md:text-[44px] lg:text-[52px] leading-[1.1] font-[800] text-white mb-6 tracking-tight">
                         Ready to Move <span class="text-[#D89A18]">Your Cargo?</span>
                     </h2>
 
@@ -871,14 +933,14 @@
                         handling.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <div class="flex flex-col w-full sm:w-auto sm:flex-row items-center justify-center gap-4 lg:gap-6">
                         <a href="#"
-                            class="bg-[#D89A18] text-white font-[600] flex items-center justify-center gap-3 px-8 py-4 rounded-[12px] hover:bg-[#c28815] transition-all shadow-[0_10px_25px_-5px_rgba(216,154,24,0.4)] hover:-translate-y-1 text-[17px] min-w-[240px]">
+                            class="bg-[#D89A18] text-white font-[600] flex items-center justify-center gap-3 px-8 py-4 rounded-[12px] hover:bg-[#c28815] transition-all shadow-[0_10px_25px_-5px_rgba(216,154,24,0.4)] hover:-translate-y-1 text-[17px] w-full lg:w-auto min-w-[240px]">
                             <i data-lucide="package" class="w-5 h-5 text-white fill-white/10"></i> Book Shipment Now <i
                                 data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                         <a href="#"
-                            class="bg-transparent border-2 border-[#D89A18] text-[#D89A18] font-[600] flex items-center justify-center gap-3 px-8 py-4 rounded-[12px] hover:bg-[#D89A18]/5 transition-all text-[17px] hover:-translate-y-1 min-w-[240px]">
+                            class="bg-transparent border-2 border-[#D89A18] text-[#D89A18] font-[600] flex items-center justify-center gap-3 px-8 py-4 rounded-[12px] hover:bg-[#D89A18]/5 transition-all text-[17px] hover:-translate-y-1 w-full lg:w-auto min-w-[240px]">
                             <i data-lucide="phone" class="w-5 h-5 text-[#D89A18] fill-[#D89A18]/10"></i> Call Expert:
                             +44 7438 282122
                         </a>
@@ -891,18 +953,20 @@
     <!-- Footer -->
     <footer class="bg-[#0E1B14] relative text-white pt-24 pb-12 border-t border-[#ECE7DE]/5 overflow-hidden">
         <!-- Subtle Background Pattern -->
-       <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none w-[600px] h-[400px]" style="background-image: radial-gradient(circle at center, transparent, transparent 4px, #D89A18 4px, #D89A18 5px); background-size: 20px 20px; mask-image: radial-gradient(circle at 50% 50%, black, transparent 70%); -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 70%);"></div>
-       <div class="absolute inset-0 bg-dotted opacity-[0.05] pointer-events-none"></div>
+        <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none w-[600px] h-[400px]"
+            style="background-image: radial-gradient(circle at center, transparent, transparent 4px, #D89A18 4px, #D89A18 5px); background-size: 20px 20px; mask-image: radial-gradient(circle at 50% 50%, black, transparent 70%); -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 70%);">
+        </div>
+        <div class="absolute inset-0 bg-dotted opacity-[0.05] pointer-events-none"></div>
 
         <div class="content-container relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
+            <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
 
                 <!-- Column 1 -->
-                <div class="flex flex-col pr-6">
+                <div class="flex flex-col items-center md:items-start pr-0 lg:pr-6">
                     <!-- Logo -->
-                    <div class="flex items-center gap-3 mb-6">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
                         <div class="flex items-end shrink-0">
-                      <svg class="shrink-0" width="50" height="40" viewBox="0 0 50 40" fill="none"
+                            <svg class="shrink-0" width="50" height="40" viewBox="0 0 50 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M25 0H10C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20H15L5 40H20L30 20C35.5228 20 40 15.5228 40 10C40 4.47715 35.5228 0 30 0H25Z"
@@ -923,13 +987,31 @@
                         punctuality are our core values.
                     </p>
                     <!-- Socials -->
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-center md:justify-start gap-3">
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#D89A18] hover:border-[#D89A18] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#D89A18] hover:border-[#D89A18] transition-colors"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#D89A18] hover:border-[#D89A18] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#D89A18] hover:border-[#D89A18] transition-colors"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg></a>
                         <a href="#"
-                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#D89A18] hover:border-[#D89A18] transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-[#D89A18] hover:border-[#D89A18] transition-colors"><svg
+                                width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
                     </div>
                 </div>
 
@@ -939,11 +1021,11 @@
                     <ul class="flex flex-col gap-4">
                         <li><a href="#"
                                 class="text-gray-400 hover:text-[#D89A18] font-[450] text-[14px] transition-colors flex items-center justify-between group">Home
-                                </a>
+                            </a>
                         </li>
                         <li><a href="#"
                                 class="text-gray-400 hover:text-[#D89A18] font-[450] text-[14px] transition-colors flex items-center justify-between group">Services
-                                </a>
+                            </a>
                         </li>
                         <li><a href="#"
                                 class="text-gray-400 hover:text-[#D89A18] font-[450] text-[14px] transition-colors flex items-center justify-between group">Our
@@ -951,7 +1033,7 @@
                         </li>
                         <li><a href="#"
                                 class="text-gray-400 hover:text-[#D89A18] font-[450] text-[14px] transition-colors flex items-center justify-between group">Coverage
-                                </a>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -983,16 +1065,17 @@
                 <div class="flex flex-col">
                     <h4 class="text-white font-[800] text-[17px] mb-8">Contact Info</h4>
                     <ul class="flex flex-col gap-5">
-                        <li class="flex items-start gap-4">
+                        <li class="flex items-start justify-center md:justify-start gap-4">
                             <i data-lucide="map-pin" class="w-5 h-5 text-[#D89A18] shrink-0 mt-0.5"></i>
-                            <span class="text-gray-400 font-[450] text-[14px] leading-relaxed">60 Applecroft road,
+                            <span class="text-gray-400 font-[450] text-[14px] leading-relaxed text-left">60 Applecroft
+                                road,
                                 Luton<br>(LU2 8BD) UK</span>
                         </li>
-                        <li class="flex items-start gap-4">
+                        <li class="flex items-start justify-center md:justify-start gap-4">
                             <i data-lucide="phone" class="w-5 h-5 text-[#D89A18] shrink-0"></i>
                             <span class="text-gray-400 font-[450] text-[14px]">+44 7438 282122</span>
                         </li>
-                        <li class="flex items-start gap-4">
+                        <li class="flex items-start justify-center md:justify-start gap-4">
                             <i data-lucide="mail" class="w-5 h-5 text-[#D89A18] shrink-0"></i>
                             <a href="mailto:info@singhrjtransport.com"
                                 class="text-gray-400 hover:text-white font-[450] text-[14px] transition-colors">info@singhrjtransport.com</a>
@@ -1021,6 +1104,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         lucide.createIcons();
+
+        // Mobile Menu Logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openMenuBtn = document.getElementById('open-menu');
+        const closeMenuBtn = document.getElementById('close-menu');
+
+        if (openMenuBtn) {
+            openMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            });
+        }
+
 
         // Initialize Testimonial Infinite Carousel
         const swiper = new Swiper('.testimonial-swiper', {
