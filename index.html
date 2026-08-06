@@ -259,61 +259,74 @@
         <!-- Trust Strip -->
         <div class="relative lg:absolute mt-12 lg:mt-0 -bottom-16 left-0 w-full z-20 px-4 lg:px-8">
             <div class="content-container">
-                <div class="bg-[#0D1B14] rounded-[24px] py-8 lg:py-[44px] px-6 lg:px-[48px] text-white shadow-2xl relative">
+                <div
+                    class="bg-[#0D1B14] rounded-[24px] py-8 lg:py-[44px] px-6 lg:px-[48px] text-white shadow-2xl relative">
                     <!-- Mobile Swiper container -->
                     <div class="swiper trust-swiper w-full overflow-hidden">
                         <div class="swiper-wrapper flex lg:items-center lg:justify-between h-full w-full">
-                            
+
                             <!-- Point 1 -->
-                            <div class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1">
+                            <div
+                                class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1">
                                 <div class="text-[#D89A18] mt-1">
                                     <i data-lucide="shield-check" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                                 </div>
                                 <div class="flex flex-col">
                                     <h4 class="font-[800] text-[17px] mb-2">Safe & Secure</h4>
-                                    <p class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[180px] font-[450]">Your cargo is protected with safety-first approach.</p>
+                                    <p
+                                        class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[180px] font-[450]">
+                                        Your cargo is protected with safety-first approach.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Separator -->
                             <div class="w-px h-14 bg-gray-800/80 mx-2 hidden lg:block"></div>
-                            
+
                             <!-- Point 2 -->
-                            <div class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1 lg:pl-4">
+                            <div
+                                class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1 lg:pl-4">
                                 <div class="text-[#D89A18] mt-1">
                                     <i data-lucide="clock" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                                 </div>
                                 <div class="flex flex-col">
                                     <h4 class="font-[800] text-[17px] mb-2">On-Time Delivery</h4>
-                                    <p class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[190px] font-[450]">We value time and ensure punctual deliveries.</p>
+                                    <p
+                                        class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[190px] font-[450]">
+                                        We value time and ensure punctual deliveries.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Separator -->
                             <div class="w-px h-14 bg-gray-800/80 mx-2 hidden lg:block"></div>
-                            
+
                             <!-- Point 3 -->
-                            <div class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1 lg:pl-4">
+                            <div
+                                class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1 lg:pl-4">
                                 <div class="text-[#D89A18] mt-1">
                                     <i data-lucide="globe" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                                 </div>
                                 <div class="flex flex-col">
                                     <h4 class="font-[800] text-[17px] mb-2">Wide Coverage</h4>
-                                    <p class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[190px] font-[450]">Extensive network across regional and global routes.</p>
+                                    <p
+                                        class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[190px] font-[450]">
+                                        Extensive network across regional and global routes.</p>
                                 </div>
                             </div>
-                            
+
                             <!-- Separator -->
                             <div class="w-px h-14 bg-gray-800/80 mx-2 hidden lg:block"></div>
-                            
+
                             <!-- Point 4 -->
-                            <div class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1 lg:pl-4">
+                            <div
+                                class="swiper-slide w-full h-auto !flex items-start gap-4 lg:w-auto flex-none lg:flex-1 lg:pl-4">
                                 <div class="text-[#D89A18] mt-1">
                                     <i data-lucide="headphones" class="w-[34px] h-[34px] stroke-[1.5]"></i>
                                 </div>
                                 <div class="flex flex-col">
                                     <h4 class="font-[800] text-[17px] mb-2">24/7 Support</h4>
-                                    <p class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[190px] font-[450]">Our team is always here to assist you.</p>
+                                    <p
+                                        class="text-gray-400 text-[14px] leading-[1.6] max-w-[200px] lg:max-w-[190px] font-[450]">
+                                        Our team is always here to assist you.</p>
                                 </div>
                             </div>
 
@@ -1117,6 +1130,21 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const openMenuBtn = document.getElementById('open-menu');
         const closeMenuBtn = document.getElementById('close-menu');
+
+        // Trust Strip Swiper (Mobile Only)
+        const trustSwiper = new Swiper('.trust-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { enabled: false, slidesPerView: 'auto', spaceBetween: 0 }
+            }
+        });
 
         if (openMenuBtn) {
             openMenuBtn.addEventListener('click', () => {
