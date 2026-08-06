@@ -138,7 +138,8 @@
                 </li>
                 <li
                     class="h-full flex items-center border-b-[3px] border-transparent gap-1 cursor-pointer hover:text-[#D89A18] transition-colors">
-                    <a href="services.html" class="flex items-center gap-1">Services <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i></a>
+                    <a href="services.html" class="flex items-center gap-1">Services <i data-lucide="chevron-down"
+                            class="w-4 h-4 text-gray-500"></i></a>
                 </li>
                 <li class="h-full flex items-center border-b-[3px] border-transparent">
                     <a href="#" class="hover:text-[#D89A18] transition-colors">Why Us</a>
@@ -1192,6 +1193,34 @@
             transition-timing-function: linear !important;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const targetSelectors = [
+                '.bg-white.rounded-\\[24px\\]',
+                '.bg-\\[\\#FDFBF7\\].rounded-\\[20px\\]',
+                '.bg-white.rounded-\\[16px\\]',
+                '.border-t-4.border-\\[\\#D89A18\\]',
+                '.group.hover\\:-translate-y-2'
+            ];
+
+            document.querySelectorAll(targetSelectors.join(', ')).forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>
